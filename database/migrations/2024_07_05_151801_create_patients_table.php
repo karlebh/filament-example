@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Owner;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -16,7 +16,7 @@ return new class extends Migration
       $table->id();
       $table->date('dob');
       $table->string('name');
-      $table->foreignIdFor(Owner::class)->cascadeOnDelete();
+      $table->foreignIdFor(User::class)->cascadeOnDelete();
       $table->string('type');
       $table->timestamps();
     });

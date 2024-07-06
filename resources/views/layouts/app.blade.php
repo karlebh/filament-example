@@ -18,6 +18,8 @@
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <livewire:layout.navigation />
 
+            <a href="/admin/login" class="text-3xl font-bold ">Go to admin panel</a>
+
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">

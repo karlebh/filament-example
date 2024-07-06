@@ -35,8 +35,8 @@ class PatientResource extends Resource
           'rabbit' => 'Rabbit',
         ])->required(),
         Forms\Components\DatePicker::make('dob')->required()->maxDate(now()),
-        Forms\Components\Select::make('owner_id')
-          ->relationship('owner', 'name')
+        Forms\Components\Select::make('user_id')
+          ->relationship('user', 'name')
           ->searchable()
           ->preload()
           ->createOptionForm([
@@ -64,7 +64,7 @@ class PatientResource extends Resource
         Tables\Columns\TextColumn::make('name')->searchable(),
         Tables\Columns\TextColumn::make('type')->label('Pet'),
         Tables\Columns\TextColumn::make('dob')->label('Date Of Birth'),
-        Tables\Columns\TextColumn::make('owner.name')->searchable(),
+        Tables\Columns\TextColumn::make('user.name')->searchable(),
       ])
       ->filters([
         Tables\Filters\SelectFilter::make('type')
