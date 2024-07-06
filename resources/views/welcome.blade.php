@@ -24,7 +24,7 @@
           <br>
           <br>
           <br>
-        <a href="/admin/login" class="text-center text-4xl font-bold mt-48">Admin Login</a>
+        <a href="/admin/login" class="text-center text-3xl font-bold mt-48" style="font-size: 3rem">Admin Login</a>
       </div>
     </body>
 </html>
